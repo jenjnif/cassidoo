@@ -1,6 +1,7 @@
 '''
 This week's question:
 You're given a broken calculator that has a number showing on its display.
+
 You can only perform two operations:
 Double the number on the display
 Subtract 1 from the number on the display
@@ -32,3 +33,4 @@ def broken_calc(X, Y):
 
 def test_answer():
     assert broken_calc(1, 2) == 1  # 1 -> 2
+    assert broken_calc(1, 3) == 3  # 1 -> 2 -> 4 -> 3
