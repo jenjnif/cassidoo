@@ -21,7 +21,8 @@ def broken_calc(X, Y):
     counter = 0
 
     while Y != X:
-        if Y % 2 == 0:  # this means it's even
+
+        if Y > X and Y % 2 == 0:
             Y /= 2
             counter += 1
         else:
@@ -31,6 +32,12 @@ def broken_calc(X, Y):
     return counter
 
 
+print(broken_calc(135, 733))
+
+
 def test_answer():
-    assert broken_calc(1, 2) == 1  # 1 -> 2
-    assert broken_calc(1, 3) == 3  # 1 -> 2 -> 4 -> 3
+    assert broken_calc(1, 2) == 1  # 2 -> 1
+    assert broken_calc(1, 3) == 3  # 3 -> 4 -> 2 -> 1
+    assert broken_calc(4, 40) == 6  # 40 -> 20 -> 10 -> 5 -> 6 -> 3 -> 4
+    assert broken_calc(135, 733) == 48  # 733 -> 734 -> 367 -> 368 -> 184 -> 92
+    # -> 93 -> 94 -> 95 -> 96 -> 97 -> 98 -> 99 -> 100... + 34 more ... -> 135
