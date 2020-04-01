@@ -17,7 +17,17 @@ Example:
 
 
 def broken_calc(X, Y):
-    pass
+    counter = 0
+
+    while Y != X:
+        if Y % 2 == 0:  # this means it's even
+            Y /= 2
+            counter += 1
+        else:
+            Y += 1
+            counter += 1
+
+    return counter
 
 
 def test_answer():
