@@ -21,4 +21,4 @@ def broken_calc(X, Y):
 
 
 def test_answer():
-    pass
+    assert broken_calc(1, 2) == 1  # 1 -> 2
