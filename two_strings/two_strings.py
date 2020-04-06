@@ -16,58 +16,23 @@ Example:
 '''
 
 
+def get_new_string(x):
+    new_list = []
+    for i in x:
+        if i == '#':
+            if new_list:
+                new_list.pop()
+        else:
+            new_list.append(i)
+
+    return ''.join(new_list)
+
+
 def two_string(n, m):
-    n_list = []
-    for i in range(len(n)):
-        if i == 0:
-            if n[i] == '#':
-                continue
-            else:
-                n_list.append(n[i])
-        else:
-            if n[i] == '#':
-                if len(n_list) >= 1:
-                    n_list.pop()
-            else:
-                n_list.append(n[i])
-    new_string_n = ''
-    new_string_n = new_string_n.join(n_list)
+    n = get_new_string(n)
+    m = get_new_string(m)
 
-    m_list = []
-    for i in range(len(m)):
-        if i == 0:
-            if m[i] == '#':
-                continue
-            else:
-                m_list.append(m[i])
-        else:
-            if m[i] == '#':
-                if len(m_list) >= 1:
-                    m_list.pop()
-            else:
-                m_list.append(m[i])
-    new_string_m = ''
-    new_string_m = new_string_m.join(m_list)
-
-    if new_string_n == new_string_m:
-        return True
-    else:
-        return False
-
-
-'''
-Example "xy##":
-
-if 1 is # ignore
-if 1 is not # add it to the list
-if 2 is # and 1 was not # then remove 1 from the list
-if 2 is not # then add it to the list
-if 3 is # and there is a previous item in the list then remove it
-if 3 is not # then add it to the list
-if 4 is # and there is a previous item in the list then remove it
-if 4 is not # then add it to the list
-
-'''
+    return n == m
 
 
 def test_two_string_a():
