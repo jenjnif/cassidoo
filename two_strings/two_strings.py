@@ -20,6 +20,9 @@ def two_string(n, m):
     pass
 
 
-def test_two_string():
-    assert two_string("a##c", "#a#c") is True
-    assert two_string("xy##", "z#w#") is True
+def test_two_string_a():
+    assert two_string('a##c', '#a#c') is True
+
+
+def test_two_string_b():
+    assert two_string('xy##', 'z#w#') is True
