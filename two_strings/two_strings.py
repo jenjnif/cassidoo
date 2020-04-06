@@ -1,5 +1,6 @@
 '''
 6 April 2020
+
 This week's question:
 Given two strings n and m, return true if they are equal
 when both are typed into empty text editors.
@@ -15,9 +16,10 @@ Example:
 '''
 
 
-def two_string():
+def two_string(n, m):
     pass
 
 
 def test_two_string():
-    pass
+    assert two_string("a##c", "#a#c") is True
+    assert two_string("xy##", "z#w#") is True
