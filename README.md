@@ -7,3 +7,4 @@ A link to [Cassidy's website](https://cassidoo.co/ "Cassidy's homepage") to sign
 Challenges:
 
 1. [broken calculator](https://github.com/jenjnif/cassidoo/tree/master/broken_calculator "broken calculator code")
+2. [two strings](https://github.com/jenjnif/cassidoo/tree/master/two_strings "two strings code")
