@@ -17,7 +17,8 @@ generateParens(3)
 
 
 def generate_parentheses(n):
-    pass
+    parentheses_list = []
+    return parentheses_list
 
 
 def test_type_generate_parentheses():
