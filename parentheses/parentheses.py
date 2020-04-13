@@ -16,9 +16,14 @@ generateParens(3)
 '''
 
 
-def generate_parentheses():
+def generate_parentheses(n):
     pass
 
 
 def test_generate_parentheses():
-    pass
+    assert generate_parentheses(3) == ["((()))",
+                                       "(()())",
+                                       "(())()",
+                                       "()(())",
+                                       "()()()"
+                                       ]
